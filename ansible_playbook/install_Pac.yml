@@ -1,0 +1,10 @@
+---
+- name: installing pack
+  hosts: all
+  become: true
+  tasks:
+    - name: intall pckg
+      yum:
+        name: git
+        state: present
+

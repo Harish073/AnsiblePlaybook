@@ -1,0 +1,12 @@
+---
+- name: cp files
+  hosts: webservers
+  become: true
+  tasks:
+  - name: cp file
+    copy:
+      src: /home/ansadmin/index.html
+      dest: /home/ansadmin
+      mode: 0600
+      owner: mike
+

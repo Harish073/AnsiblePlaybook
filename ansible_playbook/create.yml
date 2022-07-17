@@ -1,0 +1,10 @@
+---
+- name: Mv test playbook
+  hosts: 172.31.44.73
+  become: true
+  tasks:
+    - name: creating a file
+      file:
+         path: /home/ansadmin/demofile
+         state: absent 
+

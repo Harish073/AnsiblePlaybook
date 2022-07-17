@@ -1,0 +1,16 @@
+---
+- name: install htypd
+  hosts: all
+  become: true
+  tasks:
+  - name: install httpd package
+    yum:
+      name: httpd
+      state: installed
+      notfiy: start httpd service
+        
+  handlers: 
+  - name: start httpd service
+    service:
+      name: httpd
+      state: started

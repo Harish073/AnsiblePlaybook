@@ -1,0 +1,12 @@
+---
+- name: First playbook RE User
+  hosts: all
+  become: true
+  tasks:
+    - name: creating a user Mike
+      user: name=mike
+
+   
+    
+
+
